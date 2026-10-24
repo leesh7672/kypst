@@ -1,0 +1,6 @@
+[package]
+
+name = "kypst-core"
+version = "1.0.0"
+entrypoint = "lib.typ"
+license = "MIT"
