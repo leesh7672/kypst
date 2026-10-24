@@ -13,12 +13,13 @@
   margin: 2cm,
   font-heading: "Noto Sans KR",
   font-body: "Noto Serif KR",
-  size-heading: 24pt,
+  font-title: "Noto Sans KR",
+  size-heading: 12pt,
   size-body: 12pt,
-  color-heading: "#808f00",
-  color-body: "#101d00",
-  color-accent: "#dddfd0",
-  color-background: "#fdfff8",
+  size-title: 24pt,
+  color-theme: "#8f8000",
+  color-body: "#1d1000",
+  color-background: "#fff8f0",
   content,
 ) = {
   let _terms = (author: "작성", date: "날짜")
@@ -42,6 +43,13 @@
     paper: paper-size,
     margin: 2cm,
     fill: rgb(color-background),
+    header: align(
+      right,
+      text(
+        context here().page(),
+        fill: rgb(color-theme)
+      )
+    )
   )
   set text(
     font: font-body,
@@ -49,9 +57,15 @@
     size: size-body,
     lang: lang,
   )
+  set par(
+    first-line-indent: 1em,
+  )
+  set heading(numbering: "1.1.1.1.")
+  set enum(numbering: "1가ai)", indent: 0.25cm)
+  set list(indent: 0.25cm)
   show heading: set text(
     font: font-heading,
-    fill: rgb(color-heading),
+    fill: rgb(color-theme),
     size: size-heading,
   )
   align(
@@ -62,9 +76,9 @@
       } else {
         title
       },
-      font: font-heading,
-      fill: rgb(color-heading),
-      size: size-heading,
+      font: font-title,
+      fill: rgb(color-theme),
+      size: size-title,
     ),
   )
   align(
@@ -87,7 +101,7 @@
                 _terms
               }.at(key),
               font: font-heading,
-              fill: rgb(color-heading),
+              fill: rgb(color-theme),
             ),
             text(
               value,
@@ -97,8 +111,19 @@
       ),
     ),
   )
-  show document: set text(
-    size: size-body,
+  set table(
+    fill: luma(75%, 50%),
+    gutter: 2.5pt,
+    stroke: none,
   )
   content
+  align(
+    center,
+    text(
+      [끝],
+      weight: "bold",
+      font: font-heading,
+      fill: rgb(color-theme),
+    ),
+  )
 }
