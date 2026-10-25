@@ -121,7 +121,6 @@
     center,
     text(
       [끝],
-      weight: "bold",
       font: font-heading,
       fill: rgb(color-theme),
     ),
