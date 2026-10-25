@@ -61,7 +61,7 @@
     first-line-indent: 1em,
   )
   set heading(numbering: "1.1.1.1.")
-  set enum(numbering: "1가ai)", indent: 0.25cm)
+  set enum(numbering: "1가ai.", indent: 0.25cm)
   set list(indent: 0.25cm)
   show heading: set text(
     font: font-heading,
