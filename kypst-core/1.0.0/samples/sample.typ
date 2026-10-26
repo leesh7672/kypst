@@ -1,4 +1,4 @@
-#import "lib.typ": kypst-core
+#import "@kypst/kypst-core:1.0.0": kypst-core
 
 #show: kypst-core.with()
 
@@ -6,22 +6,13 @@
 
 == 절
 
-=== 항
-
-==== 목
-
-숫자 목록은 다음과 같이 나타낸다.
+목록은 다음과 같이 나타낸다.
 
 + 항목
   + 작은 항목
   + 작은 항목
 
-단추 목록은 다음과 같이 나열한다.
-
-- 항목
-- 항목
-
-표는 다음과 같이 제시한다.
+표는 다음과 같이 나타낸다.
 
 #table(
   columns: 3,

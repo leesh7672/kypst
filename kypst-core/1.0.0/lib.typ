@@ -22,8 +22,8 @@
   color-background: "#fff8f0",
   content,
 ) = {
-  let _terms = (author: "작성", date: "날짜")
-  let _terms-hanja = (author: "作成", date: "時日")
+  let _terms = (author: "작성자", date: "작성일")
+  let _terms-hanja = (author: "作成者", date: "作成日")
   let _terms = if terms != auto {
     _terms + terms
   } else {
