@@ -47,9 +47,9 @@
       right,
       text(
         context here().page(),
-        fill: rgb(color-theme)
-      )
-    )
+        fill: rgb(color-theme),
+      ),
+    ),
   )
   set text(
     font: font-body,
@@ -90,8 +90,9 @@
         rows: 1.5em,
         align: left,
         ..for (key, value) in (
-          (author: author, date: date.display("[Year]. [Month]. [Day]."))
+          (author: author)
             + metadata
+            + (date: date.display("[Year]. [Month]. [Day]."))
         ) {
           (
             text(
